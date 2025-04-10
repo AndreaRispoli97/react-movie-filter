@@ -62,7 +62,7 @@ function App() {
       </section>
       <section>
         <article>
-          <h2>Lista Film</h2>
+          <h2 className='white'>Lista Film</h2>
           <ul>
             {film.map((film, index) => (
               <li key={index}>

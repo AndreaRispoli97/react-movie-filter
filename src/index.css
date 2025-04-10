@@ -4,6 +4,14 @@
   box-sizing: border-box;
 }
 
+body {
+  background-image: url('../public/sfondo-di-un-cinema-di-design-piatto.avif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+}
+
 h1 {
   text-align: center;
   padding: 20px 0px;
@@ -18,7 +26,12 @@ hr {
   width: 400px;
 }
 
+.white {
+  color: white;
+}
+
 li {
+  color: white;
   padding: 10px 0px;
   list-style: none;
 }
