@@ -47,7 +47,7 @@ function App() {
   return (
     <>
       <h1>Catalogo film</h1>
-      <section>
+      <section className='container-first'>
         <h2>Cerca Film</h2>
         <input type="text" value={searchTitle} onChange={e => setSearchTitle(e.target.value)} />
 
@@ -59,7 +59,8 @@ function App() {
           <option>Azione</option>
         </select>
         <h2>{searchGenre}</h2>
-
+      </section>
+      <section>
         <article>
           <h2>Lista Film</h2>
           <ul>
@@ -72,7 +73,7 @@ function App() {
           </ul>
         </article>
       </section>
-      <section>
+      <section className='container-second'>
         <form onSubmit={addFilm}>
           <input type="text"
             onChange={event => setNewFilm(event.target.value)}
