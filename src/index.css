@@ -5,7 +5,7 @@
 }
 
 body {
-  background-image: url('../public/sfondo-di-un-cinema-di-design-piatto.avif');
+  background-image: url('/sfondo-di-un-cinema-di-design-piatto.avif');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
