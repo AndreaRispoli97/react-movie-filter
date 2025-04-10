@@ -7,6 +7,25 @@ function App() {
   const [film, setFilm] = useState(films)
   const [searchGenre, setSearchGenre] = useState('');
   const [searchTitle, setSearchTitle] = useState('');
+  const [newFilm, setNewFilm] = useState('');
+  const [newGenre, setNewGenre] = useState('');
+
+  const addFilm = event => {
+    event.preventDefault();
+
+    if (newFilm !== '') {
+      let newFilms =
+      {
+        title: newFilm,
+        genre: newGenre
+      }
+      let newFilmList = [...film, newFilms];
+      setFilm(newFilmList);
+      console.log(newFilmList);
+    }
+
+
+  }
 
   useEffect(() => {
     let newListFilm = films
@@ -50,6 +69,24 @@ function App() {
               </li>))}
           </ul>
         </article>
+      </section>
+      <section>
+        <form onSubmit={addFilm}>
+          <input type="text"
+            onChange={event => setNewFilm(event.target.value)}
+            value={newFilm}
+          />
+          <select
+            onChange={event => setNewGenre(event.target.value)}
+            value={newGenre}>
+            <option value=''>---</option>
+            <option>Fantascienza</option>
+            <option>Thriller</option>
+            <option>Romantico</option>
+            <option>Azione</option>
+          </select>
+          <button type='submit'>Aggiungi Film</button>
+        </form>
       </section>
 
     </>
