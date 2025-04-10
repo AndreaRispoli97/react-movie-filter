@@ -22,6 +22,8 @@ function App() {
       let newFilmList = [...film, newFilms];
       setFilm(newFilmList);
       console.log(newFilmList);
+      setNewFilm('');
+      setNewGenre('');
     }
 
 
